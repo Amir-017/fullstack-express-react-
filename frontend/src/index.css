@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slick-slide {
+  left: 0px !important;
+}
+
+.loader {
+  width: 96px;
+  height: 48px;
+  box-sizing: content-box;
+  border: 2px solid #22c55e; /* green-500 */
+  border-bottom: 50px solid #22c55e;
+  border-radius: 100%;
+  position: relative;
+  animation: 2.5s spinLoader linear infinite;
+}
+
+/* inner circles */
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+/* top dot */
+.loader:before {
+  left: 0;
+  background: #22c55e;
+  border: 18px solid #ffffff;
+}
+
+/* bottom dot */
+.loader:after {
+  left: 50%;
+  background: #ffffff;
+  border: 18px solid #22c55e;
+}
+
+/* animation */
+@keyframes spinLoader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dark .loader {
+  border-color: #334155; /* slate-700 */
+  border-bottom-color: #0ea5e9; /* cyan-500 accent */
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
+}
+
+.dark .loader:before {
+  background: #0f172a; /* deep blue-gray */
+  border: 18px solid #334155;
+}
+
+.dark .loader:after {
+  background: #334155;
+  border: 18px solid #0ea5e9;
+}

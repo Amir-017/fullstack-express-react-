@@ -1,0 +1,12 @@
+ // const { data, isLoading, error } = useQuery({
+  //   queryKey: ["products"],
+  //   queryFn: () =>
+  //     fetch("https://dummyjson.com/products").then((res) => res.json()),
+  // });
+  // if (isLoading) {
+  //   console.log("Loading...");
+  // } else if (error) {
+  //   console.log("Error:", error);
+  // } else {
+  //   console.log("Data:", data);
+  // }
