@@ -23,7 +23,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://fullstack-express-react.vercel.app",
+      "https://market-project-connected-with-back.vercel.app",
     ],
     credentials: true,
   })
