@@ -144,7 +144,7 @@ export const OrderUser = () => {
                                     text-gray-900 dark:bg-[#232a45] dark:text-white
                                     shadow-sm hover:shadow-md
                                     hover:bg-gray-50 dark:hover:bg-zinc-800/60
-                                    transition-all duration-300
+                                    transition-all duration-300 flex-col sm:flex-row
                                     "
                                     >
                                         {/* IMAGE */}

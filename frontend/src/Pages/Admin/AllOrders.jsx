@@ -26,7 +26,6 @@ export function AllOrders() {
 
         fetchOrders();
     }, []);
-    console.log(orders);
     return (
         <div className="min-h-screen px-4 py-10 bg-gray-100 dark:bg-[#0f172a]">
            {loading ? <div className="w-full h-screen flex items-center justify-center">
@@ -71,7 +70,7 @@ export function AllOrders() {
                                     className="flex items-center justify-between rounded-xl border border-gray-100 dark:border-blue-gray-600 p-3 bg-gray-50 dark:bg-blue-gray-800/40"
                                 >
 
-                                    <div className="flex items-center justify-between gap-4 w-full">
+                                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
 
                                         {/* LEFT: PRODUCT INFO */}
                                         <div className="flex items-center gap-3">
@@ -108,7 +107,7 @@ export function AllOrders() {
                                             </span>
 
                                             {/* TOTAL */}
-                                            <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
+                                            <p className="text-sm font-bold text-emerald-600 dark:text-gray-700">
                                                 ${(item.product.price * item.quantity).toFixed(2)}
                                             </p>
 

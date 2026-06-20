@@ -6,6 +6,9 @@ const AllUsers = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [tableScroll, setTableScroll] = useState(false);
+
+
 
   const getUsers = async () => {
     try {
@@ -35,7 +38,6 @@ const AllUsers = () => {
   useEffect(() => {
     getUsers();
   }, []);
-
   const handleDelete = async (id) => {
     try {
 
@@ -110,6 +112,9 @@ const AllUsers = () => {
         </span>
       </div>
     </div>
+    <p className={` font-bold text-gray-900 dark:text-white text-center md:hidden block`}>
+      scroll horizontally to see all data 
+    </p>
     <div className="container mx-auto mt-8 px-4 mb-4  flex items-center justify-center">
       {loading ? <div className="w-full min-h-screen flex items-center justify-center">
         <h2 className="loader"></h2>

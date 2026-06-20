@@ -220,8 +220,8 @@ const SearchProducts = ({ checkSearch }) => {
             {/* /////////////////////////////////////// */}
 
             {search.totalPages > 1 && (
-              <div className="w-full flex justify-center mt-10 mb-6">
-                <div className="flex items-center gap-6 px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-blue-gray-900 shadow-md backdrop-blur-sm">
+              <div className="w-full  flex  justify-center mt-10 pb-4">
+                <div className="flex items-center flex-col md:flex-row  gap-6 px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-blue-gray-900 shadow-md backdrop-blur-sm">
 
                   <Button
                     size="sm"
@@ -234,8 +234,8 @@ const SearchProducts = ({ checkSearch }) => {
                     Backward
                   </Button>
 
-                  <div className="px-4 py-1 rounded-lg bg-gray-100 dark:bg-blue-gray-800 font-bold text-lg dark:text-white shadow-inner">
-                    {search.page} / {search.totalPages}
+                  <div className="px-4 py-1 rounded-lg bg-gray-100 dark:bg-blue-gray-800 font-bold text-lg dark:text-white shadow-inner flex items-center justify-center">
+                   <h1>{search.page}</h1> /  <h1>{search.totalPages}</h1>
                   </div>
 
                   <Button

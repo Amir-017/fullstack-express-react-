@@ -128,7 +128,7 @@ const getInfoUser = async (id) => {
                               <img
                                 src={item.product?.images[0]}
                                 alt={item.product?.title}
-                                className="w-full h-full object-cover animate-bounce"
+                                className="w-full h-full object-cover "
                               />
                             </div>
 

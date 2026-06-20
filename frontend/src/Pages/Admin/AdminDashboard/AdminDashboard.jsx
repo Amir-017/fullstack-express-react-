@@ -111,8 +111,8 @@ export default function AdminDashboard() {
           <div className="loader"></div>
         </div> : <div>
           {/* Header */}
-          <div className="flex justify-between items-center mb-8">
-            <div>
+          <div className="flex justify-center  md:justify-between  flex-col md:flex-row items-center mb-8">
+            <div className="text-center md:text-left">
               <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
                 Admin Dashboard
               </h1>
@@ -124,7 +124,7 @@ export default function AdminDashboard() {
 
             <button
               onClick={() => navigate("/adminDashboard/addProduct")}
-              className="bg-green-600 hover:bg-green-700 dark:bg-blue-gray-700 dark:hover:bg-blue-gray-800 text-white px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-green-600 hover:bg-green-700 dark:bg-blue-gray-700 dark:hover:bg-blue-gray-800 text-white px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 mt-4 md:mt-0"
             >
               Add Product
             </button>
@@ -198,7 +198,7 @@ export default function AdminDashboard() {
           )}
 
           {/* Pagination */}
-          <div className="flex justify-center items-center gap-5 mt-12">
+          <div className="flex justify-center items-center flex-col md:flex-row gap-5 mt-12">
             <button
               onClick={backwardPage}
               disabled={page === 1}
