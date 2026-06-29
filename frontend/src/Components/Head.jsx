@@ -85,24 +85,27 @@ const Head = ({
     }
   };
   // get cart when component mount (update cart quantity in header)
- useEffect(() => {
-  const handleCartUpdate = () => {
-    getCart();
-  };
+  useEffect(() => {
+    if (decoded?.role === "admin") {
+      return;
+    }
+    const handleCartUpdate = () => {
+      getCart();
+    };
 
-  window.addEventListener("cartUpdated", handleCartUpdate);
+    window.addEventListener("cartUpdated", handleCartUpdate);
 
-  return () => {
-    window.removeEventListener("cartUpdated", handleCartUpdate);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("cartUpdated", handleCartUpdate);
+    };
+  }, []);
 
- // get cart when user log in (update cart quantity in header)
-useEffect(() => {
-  if (localStorage.getItem("accessToken")) {
-    getCart();
-  }
-}, []);
+  // get cart when user log in (update cart quantity in header)
+  useEffect(() => {
+    if (localStorage.getItem("accessToken") && decoded?.role !== "admin") {
+      getCart();
+    }
+  }, []);
   // close nav when click on  any link or any interaction in header
   useEffect(() => {
     setOpenNav(false);
